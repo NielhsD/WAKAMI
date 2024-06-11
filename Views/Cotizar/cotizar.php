@@ -1,99 +1,301 @@
-<?= 
-  headerAdmin($data);
-?>
+<!DOCTYPE html>
+<html lang="en">
 
-<form action="" method="POST" id="formCotizar">
-    <label for="">ID:
-        <input type="text" name="id_cotizacion" id="id_cotizacion" placeholder="ID COTIZACIÓN">
-    </label>
-    <br>
-    <label for="">Tipo de evento:
-        <select name="id_tipo_evento" id="id_tipo_evento">
-            <option value="TP001">Boda</option>
-            <option value="TP002">Quinceañera</option>
-        </select>
-    </label>
-    <br>
-    <label for="">¿Cómo deseas que te contactemos?<br>
-        <select name="id_metodo_atencion" id="id_metodo_atencion">
-            <option value="M01">Por Whatsapp</option>
-            <option value="M02">Porllamada</option>
-        </select>
-    </label>
-    <br>
-    <label for="">Nombres:
-        <input type="text" name="nombres" id="nombres" placeholder="Ingrese nombres">
-    </label>
-    <br>
-    <label for="">Apellidos:
-        <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese apellidos">
-    </label>
-    <br>
-    <label for="">Celular:
-        <input type="number" name="celular" id="celular" placeholder="Ingrese celular">
-    </label>
-    <br>
-    <label for="">Teléfono fijo:
-        <input type="number" name="telefono_fijo" id="telefono_fino" placeholder="Ingrese teléfono fijo">
-    </label>
-    <br>
-    <label for="">Correo:
-        <input type="email" name="correo" id="correo" placeholder="Ingrese correo">
-    </label>
-    <br>
-    <label for="">Nombre de la empresa:
-        <input type="text" name="nombre_empresa" id="nombre_empresa" placeholder="Ingrese el nombre de la empresa">
-    </label>
-    <br>
-    <label for="">Número de invitados:
-        <input type="number" name="n_invitados" id="n_invitados" placeholder="Ingrese el número de invitados">
-    </label>
-    <br>
+<head>
+    <title><?= $data['page_tag']; ?></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Al hacer clic en una opción del encabezado
+            $('.header-option').on('click', function() {
+                // Eliminar la clase activa de todas las opciones del encabezado
+                $('.header-option').removeClass('header-option-active');
 
-    <label for="">Fecha del evento:
-        <input type="date" name="fecha_evento" id="fecha_evento">
-    </label>
-    <br>
-    <label for="">Hora de inicio:
-        <input type="time" name="hora_inicio" id="hora_inicio">
-    </label>
-    <br>
-    <label for="">Hora de fin:
-        <input type="time" name="hora_fin" id="hora_fin">
-    </label>
-    <br>
-    <label for="">Otros detalles o comentarios:
-        <textarea name="detalles_comentarios" id="detalles_comentarios"></textarea>
-    </label>
-    <br>
-    <label for="">Suscribirse:
-        <input type="checkbox" name="suscrito" id="suscrito">
-    </label>
-    <br>
+                // Agregar la clase activa a la opción clicada
+                $(this).addClass('header-option-active');
+            });
+        });
+    </script>
 
-    <label for="">
-        <input type="hidden" name="situacion" id="situacion" value="PENDIENTE">
-    </label>
-    <br>
+    <?php
+    $nombreSitio = NOMBRE_EMPESA;
+    $descripcion = DESCRIPCION;
+    $nombreProducto = NOMBRE_EMPESA;
+    $urlWeb = base_url();
+    $urlImg = media() . "/images/portada.jpg";
+    if (!empty($data['producto'])) {
+        //$descripcion = $data['producto']['descripcion'];
+        $descripcion = DESCRIPCION;
+        $nombreProducto = $data['producto']['nombre'];
+        $urlWeb = base_url() . "/tienda/producto/" . $data['producto']['idproducto'] . "/" . $data['producto']['ruta'];
+        $urlImg = $data['producto']['images'][0]['url_image'];
+    }
+    ?>
+    <meta property="og:locale" content='es_ES' />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="<?= $nombreSitio; ?>" />
+    <meta property="og:description" content="<?= $descripcion; ?>" />
+    <meta property="og:title" content="<?= $nombreProducto; ?>" />
+    <meta property="og:url" content="<?= $urlWeb; ?>" />
+    <meta property="og:image" content="<?= $urlImg; ?>" />
 
-    <button id="btnActionForm" name="btnActionForm" class="btn btn-primary" type="submit">
-        <i class="bi bi-check-circle-fill me-2"></i>
-        <span id="btnText">Guardar</span>
-    </button>
-</form>
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="<?= media() ?>/tienda/images/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/fonts/linearicons-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/vendor/slick/slick.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/vendor/MagnificPopup/magnific-popup.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/css/util.css">
+    <link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/css/main.css">
+    <link rel="stylesheet" type="text/css" href="<?= media(); ?>/css/style.css">
+    <!--===============================================================================================-->
+</head>
 
-<script>const base_url="<?=base_url();?>";</script>
-    
-    <!-- Essential javascripts for application to work-->
-    <script src="<?=media();?>js/jquery-3.7.0.min.js"></script>
-    <script src="<?=media();?>js/bootstrap.min.js"></script>
-    <script src="<?=media();?>js/main.js"></script>
+<body>
 
-    <script src="<?=media();?>js/functionsCotizar.js"></script>
-    <!-- Data table plugin-->
-    <script type="text/javascript" src="<?=media();?>js/plugins/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="<?= media(); ?>js/bootstrap.min.js"></script>
+    <div style="background-image: url(<?= media() . '/tienda/images/hero.jpg'; ?>); width: 100%">
 
-    <!--Notificaaciones de Swal -->
-    <script src="<?=media();?>js/plugins/sweetalert2.js"></script>
+        <div class="py-5" style="width: 100%;">
+            <!-- End -->
+            <div class="">
+                <div class="mx-auto " style="width: 85%; ">
+                    <div class=" rounded-lg shadow-sm p-5 bg-white" style="opacity: 1;">
+                        <div class="row mb-3">
+                            <div class=" mx-auto text-left">
+                                <h1 class="h3 font-weight-bold text-dark">QUEREMOS CONOCERTE MEJOR</h1>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+
+                            <!-- credit card info-->
+                            <div id="nav-tab-card" class="tab-pane fade show active">
+
+                                <form role="form" action="" method="POST" id="formCotizar">
+                                    <input type="hidden" name="situacion" id="situacion" value="PENDIENTE">
+                                    <div class="form-group">
+                                        <!-- <label for="username" class="">ID</label> -->
+                                        <input type="hidden" name="id_cotizacion" id="id_cotizacion" placeholder="ID de cotización" required class="form-control">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <div class="form-group w-50">
+                                            <label for="username" class="">Tipo de evento</label>
+                                            <select name="id_tipo_evento" id="id_tipo_evento" class="form-control w-100">
+                                                <option value="TP001">Boda</option>
+                                                <option value="TP002">Quinceañera</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group w-50">
+                                            <label for="username" class="">¿Cómo deseas que te contactemos?</label>
+                                            <select name="id_metodo_atencion" id="id_metodo_atencion" class="form-control w-100">
+                                                <option value="M01">Por Whatsapp</option>
+                                                <option value="M02">Porllamada</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="input-group">
+                                        <div class="form-group w-50">
+                                            <label for="username" class="">Nombres</label>
+                                            <input type="text" name="nombres" id="nombres" placeholder="Ingrese nombres" class="form-control w-100">
+                                        </div>
+
+                                        <div class="form-group w-50">
+                                            <label for="username" class="">Apellidos</label>
+                                            <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese apellidos" class="form-control w-100">
+                                        </div>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <div class="form-group" style="width: 33.3%">
+                                            <label for="username" class="">Celular</label>
+                                            <input type="number" name="celular" id="celular" placeholder="Ingrese celular" class="form-control w-100">
+                                        </div>
+
+                                        <div class="form-group" style="width: 33.3%">
+                                            <label for="username" class="">Teléfono fijo</label>
+                                            <input type="number" name="telefono_fijo" id="telefono_fino" placeholder="Ingrese teléfono fijo" class="form-control  w-100">
+                                        </div>
+
+                                        <div class="form-group" style="width: 33.3%">
+                                            <label for="username" class="">Correo</label>
+                                            <input type="email" name="correo" id="correo" placeholder="Ingrese correo" class="form-control  w-100">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="username" class="">Nombre de la empresa</label>
+                                        <input type="text" name="nombre_empresa" id="nombre_empresa" placeholder="Ingrese el nombre de la empresa" class="form-control">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <div class="form-group w-25">
+                                            <label for="username" class="">Número de invitados</label>
+                                            <input type="number" name="n_invitados" id="n_invitados" placeholder="Ingrese el número de invitados" class="form-control w-100">
+                                        </div>
+
+                                        <div class="form-group w-25">
+                                            <label for="username" class="">fecha del evento</label>
+                                            <input type="date" name="fecha_evento" id="fecha_evento" class="form-control w-100">
+                                        </div>
+
+                                        <div class="form-group w-25">
+                                            <label for="username" class="">Hora de inicio</label>
+                                            <input type="time" name="hora_inicio" id="hora_inicio" class="form-control w-100">
+                                        </div>
+
+                                        <div class="form-group w-25">
+                                            <label for="username" class="">Hora de fin</label>
+                                            <input type="time" name="hora_fin" id="hora_fin" class="form-control w-100">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="username" class="">Otros detalles o comentarios</label>
+                                        <textarea name="detalles_comentarios" id="detalles_comentarios" class="form-control"></textarea>
+                                    </div>
+                                    <div class="" >
+                                        <input type="checkbox" name="suscrito" id="suscrito">Suscribirse                                
+                                    </div>
+
+
+                                    <div class="d-flex">
+                                        <button id="btnActionForm" name="btnActionForm" class="btn btn-dark ml-auto" type="submit" style="width: 15%; height: 45px;">
+                                            <i class="bi bi-check-circle-fill me-2"></i>
+                                            <span id="btnText">Enviar</span>
+                                        </button>
+                                    </div>
+
+
+                                    <!-- 
+                                        <div class="form-group">
+                                            <label for="cardNumber">Card number</label>
+                                            <div class="input-group">
+                                                <input type="text" name="cardNumber" placeholder="Your card number" class="form-control" required>
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text text-muted">
+                                                        <i class="fa fa-cc-visa mx-1"></i>
+                                                        <i class="fa fa-cc-amex mx-1"></i>
+                                                        <i class="fa fa-cc-mastercard mx-1"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="form-group">
+                                                    <label><span class="hidden-xs">Expiration</span></label>
+                                                    <div class="input-group">
+                                                        <input type="number" placeholder="MM" name="" class="form-control" required>
+                                                        <input type="number" placeholder="YY" name="" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group mb-4">
+                                                    <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+                                                        <i class="fa fa-question-circle"></i>
+                                                    </label>
+                                                    <input type="text" required class="form-control">
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                        <button type="button" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm"> Confirm </button> -->
+                                </form>
+                            </div>
+                            <!-- End -->
+
+                            <!-- Paypal info -->
+                            <div id="nav-tab-paypal" class="tab-pane fade">
+                                <p>Paypal is easiest way to pay online</p>
+                                <p>
+                                    <button type="button" class="btn btn-primary rounded-pill"><i class="fa fa-paypal mr-2"></i> Log into my Paypal</button>
+                                </p>
+                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <!-- End -->
+
+                            <!-- bank transfer info -->
+                            <div id="nav-tab-bank" class="tab-pane fade">
+                                <h6>Bank account details</h6>
+                                <dl>
+                                    <dt>Bank</dt>
+                                    <dd> THE WORLD BANK</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Account number</dt>
+                                    <dd>7775877975</dd>
+                                </dl>
+                                <dl>
+                                    <dt>IBAN</dt>
+                                    <dd>CZ7775877975656</dd>
+                                </dl>
+                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <!-- End -->
+                        </div>
+                        <!-- End -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+
+
+
+<script>
+    const base_url = "<?= base_url(); ?>";
+</script>
+
+<!-- Essential javascripts for application to work-->
+<script src="<?= media(); ?>js/jquery-3.7.0.min.js"></script>
+<script src="<?= media(); ?>js/bootstrap.min.js"></script>
+<script src="<?= media(); ?>js/main.js"></script>
+
+<script src="<?= media(); ?>js/functionsCotizar.js"></script>
+<!-- Data table plugin-->
+<script type="text/javascript" src="<?= media(); ?>js/plugins/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="<?= media(); ?>js/bootstrap.min.js"></script>
+
+<!--Notificaaciones de Swal -->
+<script src="<?= media(); ?>js/plugins/sweetalert2.js"></script>
 <?php footerAdmin($data); ?>

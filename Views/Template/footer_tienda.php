@@ -50,5 +50,12 @@
 	<script src="<?= media() ?>/js/functions_login.js"></script>
 	<script src="<?= media() ?>/tienda/js/functions.js"></script>
 
+
+	<script>
+		function mostrarCotizacion(){
+			// alert()
+			$('#exampleModal').modal('show');
+		}
+	</script>
 </body>
 </html>

@@ -1,6 +1,10 @@
 <?php
+
+require_once("Models/TCategoria.php");
+require_once("Models/TProducto.php");
 class Cotizar extends Controllers
 {
+    use TCategoria, TProducto;
     public function __construct()
     {
         parent::__construct();
@@ -8,18 +12,32 @@ class Cotizar extends Controllers
 
     public function Cotizar()
     {
-        $data['page_id'] = 3;
-        $data['page_tag'] = "Solicitar Cotización";
-        $data['page_title'] = "Cotizando datos";
-        $data['page_name'] = "Cotizar";
+        // $data['page_id'] = 3;
+        // $data['page_tag'] = "Solicitar Cotización";
+        // $data['page_title'] = "Cotizando datos";
+        // $data['page_name'] = "Cotizar";
+        
+        
+        
+        $pageContent = getPageRout('inicio');
+        $data['page_tag'] = NOMBRE_EMPESA;
+        $data['page_title'] = NOMBRE_EMPESA;
+        $data['page_name'] = "tienda_virtual";
+        $data['page'] = $pageContent;
+        $data['slider'] = $this->getCategoriasT(CAT_SLIDER);
+        $data['banner'] = $this->getCategoriasT(CAT_BANNER);
+        
+        
         $this->views->getView($this, "Cotizar", $data);
+        // $data['productos'] = $this->getProductosT();
+        // $this->views->getView($this, "home", $data);
     }
 
 
     public function setCotizar()
     {
 
-      
+
 
         $id_cotizacion = $_POST['id_cotizacion'];
         $id_tipo_evento = $_POST['id_tipo_evento'];
@@ -38,7 +56,7 @@ class Cotizar extends Controllers
         $suscrito = $_POST['suscrito'];
         $situacion = $_POST['situacion'];
 
-      
+
         $request_cotizacion = "";
         // echo json_encode($_POST);
 
@@ -60,6 +78,5 @@ class Cotizar extends Controllers
             echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
             // die();
         }
-    } 
-
+    }
 }//end class
