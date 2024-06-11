@@ -35,15 +35,7 @@ if (!empty($data['page'])) {
   }
 </style>
 <style>
-    .isotope-item {
-        cursor: pointer;
-    }
-
-    .isotope-item:hover {
-        border: 2px solid #6666;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-        transform: scale(1.05);
-    }
+    
 </style>
 
 </head>
@@ -55,7 +47,17 @@ if (!empty($data['page'])) {
     <section class="content">
       <div class="section hero"></div>
       <div class="section gradient-purple"></div>
-      <div class="section gradient-blue"></div>
+      <div class="section gradient-blue" style="background-image: url(<?= media().'/tienda/images/imagenwakamimedio.jpg';?>);">
+					<div class="container h-full">
+						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
+								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1" style="color: white; justify-content: center; margin-left: 300px;">
+									Wakami Eventos
+								</h2>
+							</div>
+						</div>
+					</div>
+	  </div>
 
 	  
     </section>
@@ -66,7 +68,7 @@ if (!empty($data['page'])) {
 
 
 <!-- Slider -->																								
-<section class="section-slide">
+	<section class="section-slide">
 		<div class="wrap-slick1">
 			<div class="slick1">
 			
@@ -92,14 +94,15 @@ if (!empty($data['page'])) {
 		</div>
 	</section>
 	
+	<br><br><br><br>
 
     <section class="section-services">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-				<div class="service-item">
+                <div class="col-md-4 isotope-item1">
+				<div class="service-item" style=" max-width: 350px; margin: auto;">
 				<div class="service-icon">
-					<img src="<?= media().'/tienda/images/catering1.jpg'; ?>" alt="Icono de servicio de catering" style="width: 350px; height: 360px; padding: 50px; border-radius:50%">
+					<img src="<?= media().'/tienda/images/catering1.jpg'; ?>" alt="Icono de servicio de catering" style="width: 100%; height: auto; padding: 80px; border-radius:50%">
 				</div>
 				<div class="service-content" style="text-align: center;">
 					<h3 style="color: purple; font-weight:bold; ">Servicio de Catering</h3> 
@@ -108,10 +111,10 @@ if (!empty($data['page'])) {
 			</div>
 
                 </div>
-                <div class="col-md-4">
-                    <div class="service-item">
+                <div class="col-md-4 isotope-item1">
+                    <div class="service-item" style=" max-width: 350px; margin: auto;">
                         <div class="service-icon">
-						<img src="<?= media().'/tienda/images/confeccion.jpg'; ?>" alt="Icono de servicio de catering" style="width: 350px; height: 360px; padding: 50px; border-radius:50%">
+						<img src="<?= media().'/tienda/images/confeccion.jpg'; ?>" alt="Icono de servicio de catering" style="width: 100%; height: auto; padding: 80px; border-radius:50%">
                         </div>
                         <div class="service-content" style="text-align: center;">
                             <h3 style="color: purple; font-weight:bold; ">Confección de Vestidos</h3>
@@ -119,10 +122,10 @@ if (!empty($data['page'])) {
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="service-item">
+                <div class="col-md-4 isotope-item1">
+                    <div class="service-item" style=" max-width: 350px; margin: auto;">
                         <div class="service-icon">
-						<img src="<?= media().'/tienda/images/evento.jpg'; ?>" alt="Icono de servicio de catering" style="width: 350px; height: 360px; padding: 50px; border-radius:50%">
+						<img src="<?= media().'/tienda/images/evento.jpg'; ?>" alt="Icono de servicio de catering" style="width: 100%; height: auto; padding: 80px; border-radius:50%">
                         </div>
                         <div class="service-content" style="text-align: center;">
                             <h3 style="color: purple; font-weight:bold; ">Organización de Eventos</h3>

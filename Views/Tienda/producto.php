@@ -9,17 +9,7 @@ $urlShared = base_url()."/tienda/producto/".$arrProducto['idproducto']."/".$arrP
 <br><br><br>
 <hr>
 
-<style>
-    .item-slick2 {
-        cursor: pointer;
-    }
-
-    .item-slick2:hover {
-        border: 2px solid #6666;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-        transform: scale(1.05);
-    }
-</style>
+<link rel="stylesheet" href="http://localhost/wakami/Assets/tienda/css/style.css">
 
 	<!-- breadcrumb -->
 	<div class="container">

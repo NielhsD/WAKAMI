@@ -1,0 +1,71 @@
+/* author: https://codepen.io/GreenSock/pen/YzbPYMx
+GSAP
+ */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .wrapper,
+  .content {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .content {
+    overflow-x: hidden;
+  }
+  
+  .content .section {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .content .section.hero {
+    background-image: url(http://localhost/wakami/Assets/tienda/images/wakami1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .image-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    perspective: 500px;
+    overflow: hidden;
+  }
+  
+/*Diseño de productos*/
+.isotope-item {
+  cursor: pointer;
+}
+
+.isotope-item:hover {
+  border: 2px solid #6666;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+/*Diseño de categorias de productos*/
+.isotope-item {
+    cursor: pointer;
+  }
+
+.isotope-item:hover {
+    border: 1px solid #6666;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+
+/*Diseño de imagenes servicios*/
+.isotope-item1:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
