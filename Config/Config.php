@@ -44,10 +44,10 @@
 
 	//Datos Empresa
 	const DIRECCION = "Imperial, Cañete";
-	const TELEMPRESA = "901889643";
+	const TELEMPRESA = "993403860";
 	const WHATSAPP = "998889563";
 	const EMAIL_EMPRESA = "";
-	const EMAIL_PEDIDOS = ""; 
+	const EMAIL_PEDIDOS = "wakami@gmail.com"; 
 	const EMAIL_SUSCRIPCION = "";
 	const EMAIL_CONTACTO = "";
 
@@ -101,5 +101,7 @@
 	const FACEBOOK = "https://www.facebook.com/eventoswakami";
 	const INSTAGRAM = "#";
 	
+	//HORARIO
+	const HORARIO = "Abierto: 8:00 a.m | Cerrado: 8:00 p.m";
 
  ?>

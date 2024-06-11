@@ -10,6 +10,19 @@ if (!empty($data['page'])) {
 }
 
 ?>
+
+<style>
+    .isotope-item {
+        cursor: pointer;
+    }
+
+    .isotope-item:hover {
+        border: 2px solid #6666;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+    }
+</style>
+
 <!-- Slider -->
 <section class="section-slide">
 	<div class="wrap-slick1">

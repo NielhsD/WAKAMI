@@ -4,6 +4,19 @@ $arrProductos = $data['productos'];
  ?>
 <br><br><br>
 <hr>
+
+<style>
+    .isotope-item {
+        cursor: pointer;
+    }
+
+    .isotope-item:hover {
+        border: 2px solid #6666;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+    }
+</style>
+
 	<!-- Product -->
 	<div class="bg0 m-t-23 p-b-140">
 		<div class="container">

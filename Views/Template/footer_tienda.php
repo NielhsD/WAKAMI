@@ -31,7 +31,7 @@
 						<?= DIRECCION ?> <br>
 						Celular: <a class="linkFooter" href="tel:<?= TELEMPRESA ?>"><?= TELEMPRESA ?></a><br>
 						Correo pedidos: <a class="linkFooter" href="mailto:<?= EMAIL_PEDIDOS ?>"><?= EMAIL_PEDIDOS ?></a><br>
-						Correo dueña: <a class="linkFooter" href="mailto:<?= EMAIL_EMPRESA ?>"><?= EMAIL_EMPRESA ?></a>
+						Horarios de atención: <a class="linkFooter"><?= HORARIO ?></a>
 					</p>
 
 					<div class="p-t-27">
@@ -46,7 +46,7 @@
 				</div>
 
 				<div class="col-sm-12 col-lg-4 p-b-50 d-flex align-items-center">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.91223849702723!2d-76.35255016531241!3d-13.061379830337268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910ffbdd4c8cdadf%3A0x80e25b1cfd73cd6e!2sRicky%20Pan!5e0!3m2!1ses!2spe!4v1717949702216!5m2!1ses!2spe" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.6489320784432!2d-76.35315163044493!3d-13.0613853992039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910ffbdd4e065bab%3A0xd19e01221c244523!2sJir%C3%B3n%20El%20Carmen%20332%2C%20Imperial%2015701!5e0!3m2!1ses-419!2spe!4v1717959973562!5m2!1ses-419!2spe" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</div>
 		</div>
