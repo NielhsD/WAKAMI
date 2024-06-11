@@ -52,8 +52,8 @@
 
 			if(empty($request))
 			{
-				$query_insert  = "INSERT INTO cotizacion VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	        	$arrData = array($this->id_cotizacion, $this->id_tipo_evento, $this->id_metodo_atencion, $this->nombres, $this->apellidos, $this->celular,  $this->telefono_fijo, $this->correo, $this->nombre_empresa,  $this->n_invitados, $this->fecha_evento, $this->hora_inicio,  $this->hora_fin, $this->detalles_comentarios, $this->suscrito, $this->situacion, $this->estado);
+				$query_insert  = "INSERT INTO cotizacion VALUES(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	        	$arrData = array($this->id_tipo_evento, $this->id_metodo_atencion, $this->nombres, $this->apellidos, $this->celular,  $this->telefono_fijo, $this->correo, $this->nombre_empresa,  $this->n_invitados, $this->fecha_evento, $this->hora_inicio,  $this->hora_fin, $this->detalles_comentarios, $this->suscrito, $this->situacion, $this->estado);
 	        	$request_insert = $this->insert($query_insert,$arrData);
 	        	$return = $request_insert;
 			}else{

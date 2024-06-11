@@ -204,7 +204,7 @@
                                     <div class="d-flex">
                                         <button id="btnActionForm" name="btnActionForm" class="btn btn-danger ml-auto" type="submit" style="width: 15%; height: 45px;">
                                             <i class="bi bi-check-circle-fill me-2"></i>
-                                            <span id="btnText" style="font-family: Montserrat-Bold;">Enviar</span>
+                                            <span id="btnEnviar" style="font-family: Montserrat-Bold;">Enviar</span>
                                         </button>
                                     </div>
 
@@ -314,3 +314,5 @@
 <!--Notificaaciones de Swal -->
 <script src="<?= media(); ?>js/plugins/sweetalert2.js"></script>
 <?php footerAdmin($data); ?>
+
+<script src="<?= media(); ?>/js/functionsCotizar.js"></script>

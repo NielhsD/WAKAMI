@@ -60,6 +60,13 @@ class Cotizar extends Controllers
         $request_cotizacion = "";
         // echo json_encode($_POST);
 
+
+        if($suscrito == "" || $suscrito == null){
+            $suscrito = "NO";
+        }else{
+            $suscrito = "SI";
+        }
+
         $request_cotizacion = $this->model->insertCotizacion($id_cotizacion, $id_tipo_evento, $id_metodo_atencion, $nombres, $apellidos, $celular,  $telefono_fijo, $correo, $nombre_empresa,  $n_invitados, $fecha_evento, $hora_inicio,  $hora_fin, $detalles_comentarios, $suscrito, $situacion, '1');
         $option = 1;
 

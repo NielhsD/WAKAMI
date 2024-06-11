@@ -6,12 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
     var formCotizacion = document.querySelector("#formCotizar");
     formCotizacion.onsubmit = function (e) {
         e.preventDefault();
-        // alert('bb')
+        // alert('bb');
+        // return;
         // var strCotizacion = document.querySelector('#id_cotizacion').value;
         // var strSituacion = document.querySelector('#id_tipo_evento').value;
    
         var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-        var ajaxUrl = base_url + 'Cotizar/setCotizar';
+        var ajaxUrl = base_url + '/Cotizar/setCotizar';
         var formData = new FormData(formCotizacion);
         request.open("POST", ajaxUrl, true);
         request.send(formData);
@@ -20,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (request.readyState == 4 && request.status == 200) {
                 // var objData = JSON.parse(request.responseText);
                 console.log(request.responseText);
+                alert("Cotización registrada correctamente");
+                location.reload();
                 // if (objData.status) {
                 //     $('#modalFormCotizacion').modal("hide");
                 //     formCotizacion.reset();
