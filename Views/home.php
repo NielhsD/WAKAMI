@@ -10,52 +10,129 @@ if (!empty($data['page'])) {
 }
 
 ?>
-<!-- Slider -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/xxmzBrw.css">
+	<link rel="stylesheet" href="http://localhost/wakami/Assets/tienda/css/style.css">
+    <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script defer src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script defer src="http://localhost/wakami/Assets/tienda/js/mains.js"></script>
+	
+	
+<style>
+  pointer-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    pointer-events: none; /* Importante para permitir clics a través del componente */
+  }
+</style>
+<style>
+    .isotope-item {
+        cursor: pointer;
+    }
+
+    .isotope-item:hover {
+        border: 2px solid #6666;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+    }
+</style>
+
+</head>
+<body>
+	
+	<pointer-particles></pointer-particles>
+
+  <section class="wrapper">
+    <section class="content">
+      <div class="section hero"></div>
+      <div class="section gradient-purple"></div>
+      <div class="section gradient-blue"></div>
+
+	  
+    </section>
+    <section class="image-container">
+      <img src="http://localhost/wakami/Assets/tienda/images/imagen0.png" alt="image">
+    </section>
+  </section>
+
+
+<!-- Slider -->																								
 <section class="section-slide">
-	<div class="wrap-slick1">
-		<div class="slick1">
-
-			<div class="item-slick1" style="background-image: url(<?= media() . '/tienda/images/hero.jpg'; ?>);">
-				<div class="container h-full">
-					<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-						<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
-							<span class="ltext-101 cl0 respon2">
-								Organización de eventos, servicios de catering, venta de pasteles, confección de vestidos y trajes.
-							</span>
-						</div>
-
-						<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
-							<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1">
-								Wakami Eventos
-							</h2>
-						</div>
-
-
-						<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-
-							<div class="d-flex flex-row">
-								<!-- <button onclick="mostrarCotizacion();" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" data-toggle="modal" data-target="#exampleModal">
-									Cotizar
-								</button> -->
-
-								<a href="<?= base_url() . '/cotizar/' ?>" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-									Cotizar
-								</a>
-
-								&nbsp;
-								<a href="<?= base_url() . '/tienda/' ?>" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+		<div class="wrap-slick1">
+			<div class="slick1">
+			
+				<div class="item-slick1" style="background-image: url(<?= media().'/tienda/images/wkm2.png';?>);">
+					<div class="container h-full">
+						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
+								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1" style="color: white; justify-content: center; margin-left: 300px;">
+									Wakami Eventos
+								</h2>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="1600">
+								<a href="<?= base_url().'/tienda/'?>" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="margin-left: 500px;">
 									Ver productos
 								</a>
-
 							</div>
 						</div>
 					</div>
 				</div>
+			
+			</div>
+		</div>
+	</section>
+	
+
+    <section class="section-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+				<div class="service-item">
+				<div class="service-icon">
+					<img src="<?= media().'/tienda/images/catering1.jpg'; ?>" alt="Icono de servicio de catering" style="width: 350px; height: 360px; padding: 50px; border-radius:50%">
+				</div>
+				<div class="service-content" style="text-align: center;">
+					<h3 style="color: purple; font-weight:bold; ">Servicio de Catering</h3> 
+					<p style="color: black; margin-top: 20px;">Ofrecemos un servicio completo de organización de eventos, desde la selección de menú hasta la disposición del lugar.</p>
+				</div>
 			</div>
 
-		</div>
-	</div>
-</section>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <div class="service-icon">
+						<img src="<?= media().'/tienda/images/confeccion.jpg'; ?>" alt="Icono de servicio de catering" style="width: 350px; height: 360px; padding: 50px; border-radius:50%">
+                        </div>
+                        <div class="service-content" style="text-align: center;">
+                            <h3 style="color: purple; font-weight:bold; ">Confección de Vestidos</h3>
+                            <p style="color: black; margin-top: 20px;">Diseñamos y confeccionamos vestidos a medida para ocasiones especiales, garantizando elegancia y estilo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <div class="service-icon">
+						<img src="<?= media().'/tienda/images/evento.jpg'; ?>" alt="Icono de servicio de catering" style="width: 350px; height: 360px; padding: 50px; border-radius:50%">
+                        </div>
+                        <div class="service-content" style="text-align: center;">
+                            <h3 style="color: purple; font-weight:bold; ">Organización de Eventos</h3>
+                            <p style="color: black; margin-top: 20px;">Nos encargamos de cada detalle para que tu evento sea memorable, desde la planificación hasta la ejecución, dejando una impresión duradera en tus invitados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <!-- Banner -->
 <div class="sec-banner bg0 p-t-80 p-b-50">
@@ -254,6 +331,15 @@ if (!empty($data['page'])) {
 
 
 </section>
+
+
+
+
 <?php
 footerTienda($data);
 ?>
+
+
+
+</body>
+</html>
