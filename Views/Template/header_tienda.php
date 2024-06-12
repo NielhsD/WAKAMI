@@ -162,9 +162,12 @@ $infoPreguntas = !empty(getInfoPage(PPREGUNTAS)) ? getInfoPage(PPREGUNTAS)['cont
 								<a href="<?= base_url(); ?>/nosotros">Nosotros</a>
 							</li>
 
-
 							<li>
 								<a href="<?= base_url(); ?>/contacto">Contacto</a>
+							</li>
+
+							<li>
+								<a href="<?= base_url(); ?>/blog">Blog</a>
 							</li>
 						</ul>
 					</div>
@@ -284,6 +287,10 @@ $infoPreguntas = !empty(getInfoPage(PPREGUNTAS)) ? getInfoPage(PPREGUNTAS)['cont
 
 				<li>
 					<a href="<?= base_url(); ?>/contacto">Contacto</a>
+				</li>
+
+				<li>
+					<a href="<?= base_url(); ?>/blog">Blog</a>
 				</li>
 			</ul>
 		</div>

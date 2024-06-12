@@ -83,6 +83,7 @@
 	const PTERMINOS = 7;
 	const PSUCURSALES = 8;
 	const PERROR = 9;
+	const PBLOG = 10;
 
 	//Roles
 	const RADMINISTRADOR = 1;
