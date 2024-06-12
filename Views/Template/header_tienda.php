@@ -133,20 +133,14 @@ $infoPreguntas = !empty(getInfoPage(PPREGUNTAS)) ? getInfoPage(PPREGUNTAS)['cont
 				<nav class="limiter-menu-desktop container">
 					<style type="text/css">
 						.logo {
-							font-family: Arial, sans-serif;
-							font-size: 24px;
-							font-weight: bold;
-							color: #e83e8c;
-							text-decoration: none;
+							transform: scale(1.3); /* Aumenta el tamaño en dispositivos más pequeños */
+							transform-origin: left; /* Asegura que la imagen se escale desde su centro */
 						}
 
-						.logo:hover {
-							color: var(--five);
-						}
 					</style>
 					<!-- Logo desktop -->
 					<a href="<?= base_url(); ?>" class="logo">
-						Wakami
+						<img src="<?= media(); ?>/tienda/images/logo.png" alt="Logo Wakami" >
 					</a>
 
 					<!-- Menu desktop -->
@@ -182,7 +176,7 @@ $infoPreguntas = !empty(getInfoPage(PPREGUNTAS)) ? getInfoPage(PPREGUNTAS)['cont
 						</button> -->
 
 						<a href="<?= base_url() . '/cotizar/' ?>" class="flex-c-m stext-105 cl0 size-105 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-							Cotizar
+							¡COTÍZA YA!
 						</a>
 
 						<!-- <div class="d-flex flex-row">
@@ -310,6 +304,14 @@ $infoPreguntas = !empty(getInfoPage(PPREGUNTAS)) ? getInfoPage(PPREGUNTAS)['cont
 				</form>
 			</div>
 		</div>
+	
+		<script type="text/javascript">
+				window.addEventListener("scroll", function(){
+					var header = document.querySelector("header");
+					header.classList.toogle("abajo", window.scrollY>0);
+
+				})
+		</script>
 	</header>
 	<!-- Cart -->
 	<div class="wrap-header-cart js-panel-cart">

@@ -16,6 +16,7 @@ GSAP
   
   .content {
     overflow-x: hidden;
+    position: relative;
   }
   
   .content .section {
@@ -27,8 +28,35 @@ GSAP
     background-image: url(http://localhost/wakami/Assets/tienda/images/wakami1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-start; /* Alinea el texto al inicio verticalmente */
+    justify-content: left;
     background-size: cover;
+    position: relative;
   }
+
+  .ltext-201 {
+    font-size: 1em; /* Tamaño de fuente inicial */
+    font-weight: 800; /* Grosor de fuente inicial */
+    font-size: 2em;
+    color: #e83e8c;
+    font-family: 'harrington', sans-serif; /* Cambia la fuente a Roboto o tu fuente elegante */
+    font-weight: 700; /* Hace la fuente más gruesa */
+    opacity: 0; /* Inicia invisible */
+    transform: scale(0.25); /* Inicia más pequeño */
+    animation: showText 7s forwards; /* Usa la animación definida abajo */
+}
+
+@keyframes showText {
+    from {
+        opacity: 0;
+        transform: scale(0.25);
+    }
+    to {
+        opacity: 100%;
+        transform: scale(1.4);
+    }
+}
   
   .image-container {
     width: 100%;
@@ -42,6 +70,13 @@ GSAP
     overflow: hidden;
   }
   
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
 /*Diseño de productos*/
 .isotope-item {
   cursor: pointer;

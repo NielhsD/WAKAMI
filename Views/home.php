@@ -17,10 +17,10 @@ if (!empty($data['page'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/xxmzBrw.css">
-	<link rel="stylesheet" href="http://localhost/wakami/Assets/tienda/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/css/style.css">
     <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script defer src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script defer src="http://localhost/wakami/Assets/tienda/js/mains.js"></script>
+    <script defer src="<?= media() ?>/tienda/js/mains.js"></script>
 	
 	
 <style>
@@ -43,56 +43,20 @@ if (!empty($data['page'])) {
 	
 	<pointer-particles></pointer-particles>
 
-  <section class="wrapper">
-    <section class="content">
-      <div class="section hero"></div>
-      <div class="section gradient-purple"></div>
-      <div class="section gradient-blue" style="background-image: url(<?= media().'/tienda/images/imagenwakamimedio.jpg';?>);">
-					<div class="container h-full">
-						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
-								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1" style="color: white; justify-content: center; margin-left: 300px;">
-									Wakami Eventos
-								</h2>
-							</div>
-						</div>
-					</div>
-	  </div>
+  	<section class="wrapper">
+		<section class="content">
+			<div class="section hero"> 
+			<h2 class="ltext-201" style=" justify-content: center center; padding-top: 15%; margin-left: 35%;">Wakami Eventos</h2>
+			</di>
+		</section>
 
-	  
-    </section>
-    <section class="image-container">
-      <img src="http://localhost/wakami/Assets/tienda/images/imagen0.png" alt="image">
-    </section>
+		<section class="image-container">
+			<img src="http://localhost/wakami/Assets/tienda/images/imagen0.png" alt="image">
+		</section>
   </section>
 
 
-<!-- Slider -->																								
-	<section class="section-slide">
-		<div class="wrap-slick1">
-			<div class="slick1">
-			
-				<div class="item-slick1" style="background-image: url(<?= media().'/tienda/images/wkm2.png';?>);">
-					<div class="container h-full">
-						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
-								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1" style="color: white; justify-content: center; margin-left: 300px;">
-									Wakami Eventos
-								</h2>
-							</div>
-								
-							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="1600">
-								<a href="<?= base_url().'/tienda/'?>" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="margin-left: 500px;">
-									Ver productos
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			
-			</div>
-		</div>
-	</section>
+
 	
 	<br><br><br><br>
 
@@ -335,7 +299,32 @@ if (!empty($data['page'])) {
 
 </section>
 
-
+<!-- Slider -->																								
+	<section class="section-slide">
+		<div class="wrap-slick1">
+			<div class="slick1">
+			
+				<div class="item-slick1" style="background-image: url(<?= media().'/tienda/images/wkm2.png';?>);">
+					<div class="container h-full">
+						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
+								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1" style="color: white; justify-content: center; margin-left: 300px;">
+									Wakami Eventos
+								</h2>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="1600">
+								<a href="<?= base_url().'/contacto/'?>" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="margin-left: 500px;">
+									CONTÁCTANOS 
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</section>
 
 
 <?php

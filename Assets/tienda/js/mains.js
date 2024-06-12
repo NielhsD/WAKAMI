@@ -182,6 +182,21 @@ class PointerParticle {
 PointerParticles.register();
 
 //----------------- Scroll Trigger ------------
+document.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    const textElement = document.querySelector('.ltext-201');
+    
+    // Ajusta este valor según dónde desees que el texto se detenga.
+    const stopPosition = window.innerHeight * 0.5; // Para detenerlo en el centro de la pantalla.
+
+    // Mueve el texto hacia abajo desde el top hasta que alcance stopPosition.
+    if (scrollPosition < stopPosition) {
+        textElement.style.transform = `translateY(${scrollPosition}px)`;
+    } else {
+        textElement.style.transform = `translateY(${stopPosition}px)`;
+    }
+});
+
   
 gsap.registerPlugin(ScrollTrigger);
 
