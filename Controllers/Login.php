@@ -14,7 +14,7 @@
 
 		public function login()
 		{
-			$data['page_tag'] = "Login - Teinda Wakami";
+			$data['page_tag'] = "Login - Tienda Wakami";
 			$data['page_title'] = "Tienda Virtual";
 			$data['page_name'] = "login";
 			$data['page_functions_js'] = "functions_login.js";
@@ -25,7 +25,7 @@
 			// dep($_POST);
 			if ($_POST) {
 				// Si se desea permitir el acceso sin usuario ni contraseña
-				$allowAccessWithoutCredentials = true;
+				$allowAccessWithoutCredentials = false;
 		
 				if (!$allowAccessWithoutCredentials && (empty($_POST['txtEmail']) || empty($_POST['txtPassword']))) {
 					$arrResponse = array('status' => false, 'msg' => 'Error de datos');
