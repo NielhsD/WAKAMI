@@ -9,7 +9,7 @@ $urlShared = base_url()."/tienda/producto/".$arrProducto['idproducto']."/".$arrP
 <br><br><br>
 <hr>
 
-<link rel="stylesheet" href="http://localhost/wakami/Assets/tienda/css/style.css">
+<link rel="stylesheet" href="<?= media() ?>/tienda/css/style.css">
 
 	<!-- breadcrumb -->
 	<div class="container">
