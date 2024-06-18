@@ -125,7 +125,10 @@ $infoPreguntas = !empty(getInfoPage(PPREGUNTAS)) ? getInfoPage(PPREGUNTAS)['cont
 						<?php } ?>
 					</div>
 
-
+					<a href="<?= base_url(). '/perfil' ?>" class="text-white">
+    				<i class="fa fa-user fa-lg"></i> Mi Perfil
+					</a>
+					
 				</div>
 			</div>
 
