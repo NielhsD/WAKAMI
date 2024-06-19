@@ -62,9 +62,9 @@ class ClientesModel extends Mysql
 
 	public function selectClientes()
 	{
-		$sql = "SELECT idpersona,identificacion,nombres,apellidos,telefono,email_user,status 
-				FROM persona 
-				WHERE rolid = ".RCLIENTES." and status != 0 "; 
+		
+		$sql = "SELECT idpersona, identificacion, nombres, apellidos, telefono, email_user, status FROM persona ";
+		// $sql .= "WHERE rolid = ".RCLIENTES." and status != 0 "; 
 		$request = $this->select_all($sql);
 		return $request;
 	}

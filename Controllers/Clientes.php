@@ -104,7 +104,7 @@ class Clientes extends Controllers{
 
 	public function getClientes()
 	{
-		if($_SESSION['permisosMod']['r']){
+
 			$arrData = $this->model->selectClientes();
 			for ($i=0; $i < count($arrData); $i++) {
 				$btnView = '';
@@ -122,8 +122,7 @@ class Clientes extends Controllers{
 				$arrData[$i]['options'] = '<div class="text-center">'.$btnView.' '.$btnEdit.' '.$btnDelete.'</div>';
 			}
 			echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
-		}
-		die();
+	
 	}
 
 	public function getCliente($idpersona){

@@ -37,6 +37,8 @@
         $urlWeb = base_url() . "/tienda/producto/" . $data['producto']['idproducto'] . "/" . $data['producto']['ruta'];
         $urlImg = $data['producto']['images'][0]['url_image'];
     }
+
+
     ?>
     <meta property="og:locale" content='es_ES' />
     <meta property="og:type" content="website" />
@@ -79,6 +81,16 @@
     <!--===============================================================================================-->
 </head>
 
+<style>
+    input:focus,
+    textarea:focus,
+    select:focus,
+    option:focus {
+        border-color: #FD4D5A !important;
+        border-width: 2px !important;
+    }
+</style>
+
 <body>
 
     <div style="background-image: url(<?= media() . '/tienda/images/hero.jpg'; ?>); width: 100%">
@@ -86,11 +98,12 @@
         <div class="py-5" style="width: 100%;">
             <!-- End -->
             <div class="">
-                <div class="mx-auto " style="width: 85%; ">
-                    <div class=" rounded-lg shadow-sm p-5" style="opacity: 1; background-color: #222;">
+                <div class="mx-auto " style="width: 75%;">
+                    <div class=" rounded-lg shadow-sm" style="opacity: 1; background-color: #2A2A2A; border-radius: 20px; padding: 5rem 10rem;">
                         <div class="row mb-3">
                             <div class=" mx-auto text-left">
-                                <h1 class="h3 font-weight-bold text-white" style="font-family: Montserrat-Bold;">QUEREMOS CONOCERTE MEJOR</h1>
+                                <h1 class="h3 font-weight-bold text-white pb-1" style="font-family: Montserrat-Bold;">COTIZA CON NOSOTROS</h1>
+                                <hr style="border-width: 2px; border-color: #5D5D5D; ">
                             </div>
                         </div>
 
@@ -108,8 +121,8 @@
 
                                     <div class="input-group">
                                         <div class="form-group w-50">
-                                            <label for="username" class=" text-white" style="font-family: Montserrat-Bold;">Tipo de evento</label>
-                                            <select name="id_tipo_evento" id="id_tipo_evento" class="form-control w-100 text-white border border-danger" style="background-color: #222; border-radius: 10px; font-family: Montserrat-Regular;">
+                                            <label for="username" class=" text-white" style="font-family: Montserrat-Regular;">Tipo de evento</label>
+                                            <select name="id_tipo_evento" id="id_tipo_evento" class="form-control w-100 text-white " style="background-color: #3F3F3F; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;">
                                                 <option value="TP001">Boda</option>
                                                 <option value="TP002">Quinceañera</option>
                                             </select>
@@ -117,8 +130,8 @@
                                         &nbsp;
                                         &nbsp;
                                         <div class="form-group w-50">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Bold;">¿Cómo deseas que te contactemos?</label>
-                                            <select name="id_metodo_atencion" id="id_metodo_atencion" class="form-control w-100 text-white border border-danger"  style="background-color: #222;  border-radius: 10px; font-family: Montserrat-Regular;">
+                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">¿Cómo deseas que te contactemos?</label>
+                                            <select name="id_metodo_atencion" id="id_metodo_atencion" class="form-control w-100 text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;">
                                                 <option value="M01">Por Whatsapp</option>
                                                 <option value="M02">Porllamada</option>
                                             </select>
@@ -128,73 +141,73 @@
 
                                     <div class="input-group">
                                         <div class="form-group w-50">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Bold;">Nombres</label>
-                                            <input type="text" name="nombres" id="nombres" placeholder="Ingrese nombres" class="form-control w-100 text-white border border-danger" style="background-color: #222;  border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Nombres <span class="text-danger h4">*</span></label>
+                                            <input type="text" name="nombres" id="nombres" placeholder="Ingrese nombres" class="form-control w-100 text-white" style="background-color: #3F3F3F;  border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                         &nbsp;
                                         &nbsp;
                                         <div class="form-group w-50">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Bold;">Apellidos</label>
-                                            <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese apellidos" class="form-control w-100 text-white border border-danger"  style="background-color: #222;  border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Apellidos <span class="text-danger h4">*</span></label>
+                                            <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese apellidos" class="form-control w-100 text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                     </div>
 
                                     <div class="input-group">
                                         <div class="form-group" style="width: 33.3%">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Bold;">Celular</label> 
-                                            <input type="number" name="celular" id="celular" placeholder="Ingrese celular" class="form-control w-100 text-white border border-danger"  style="background-color: #222;  border-radius: 10px; font-family: Montserrat-Regular;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  required maxlength="9">
+                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Celular <span class="text-danger h4">*</span></label>
+                                            <input type="number" name="celular" id="celular" placeholder="Ingrese celular" class="form-control w-100 text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required maxlength="9">
                                         </div>
                                         &nbsp;
-                                        &nbsp;                        
+                                        &nbsp;
                                         <div class="form-group" style="width: 33.3%">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Bold;">Teléfono fijo</label>
-                                            <input type="number" name="telefono_fijo" id="telefono_fino" placeholder="Ingrese teléfono fijo" class="form-control  w-100 text-white border border-danger"  style="background-color: #222;  border-radius: 10px; font-family: Montserrat-Regular;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  required maxlength="9">
+                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Teléfono fijo</label>
+                                            <input type="number" name="telefono_fijo" id="telefono_fino" placeholder="Ingrese teléfono fijo" class="form-control  w-100 text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required maxlength="9">
                                         </div>
                                         &nbsp;
-                                        &nbsp; 
+                                        &nbsp;
                                         <div class="form-group" style="width: 33.3%">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Bold;">Correo</label>
-                                            <input type="email" name="correo" id="correo" placeholder="Ingrese correo" class="form-control  w-100 text-white border border-danger"  style="background-color: #222;  border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Correo</label>
+                                            <input type="email" name="correo" id="correo" placeholder="Ingrese correo" class="form-control  w-100 text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="username" class="text-white" style="font-family: Montserrat-Bold;">Nombre de la empresa</label>
-                                        <input type="text" name="nombre_empresa" id="nombre_empresa" placeholder="Ingrese el nombre de la empresa" class="form-control text-white border border-danger"  style="background-color: #222; border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                        <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Nombre de la empresa</label>
+                                        <input type="text" name="nombre_empresa" id="nombre_empresa" placeholder="Ingrese el nombre de la empresa" class="form-control text-white" style="background-color: #3F3F3F; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;" required>
                                     </div>
 
                                     <div class="input-group">
                                         <div class="form-group w-25">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Bold;">Número de invitados</label>
-                                            <input type="number" name="n_invitados" id="n_invitados" placeholder="Ingrese el número de invitados" class="form-control w-100  text-white border border-danger"  style="background-color: #222; border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Número de invitados <span class="text-danger h4">*</span></label>
+                                            <input type="number" name="n_invitados" id="n_invitados" placeholder="Ingrese el número de invitados" class="form-control w-100  text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                         &nbsp;
-                                        &nbsp; 
+                                        &nbsp;
                                         <div class="form-group w-25">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Bold;">fecha del evento</label>
-                                            <input type="date" name="fecha_evento" id="fecha_evento" class="form-control w-100 text-white border border-danger"  style="background-color: #222; border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Fecha del evento <span class="text-danger h4">*</span></label>
+                                            <input type="date" class="form-control w-100 text-white d-inline-block" name="fecha_evento" id="fecha_evento" style="color-scheme: dark; background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                         &nbsp;
-                                        &nbsp; 
+                                        &nbsp;
                                         <div class="form-group w-25">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Bold;">Hora de inicio</label>
-                                            <input type="time" name="hora_inicio" id="hora_inicio" class="form-control w-100 text-white border border-danger"  style="background-color: #222; border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Hora de inicio <span class="text-danger h4">*</span></label>
+                                            <input type="time" name="hora_inicio" id="hora_inicio" class="form-control w-100 text-white d-inline-block" style="color-scheme: dark; background-color: #3F3F3F; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                         &nbsp;
-                                        &nbsp; 
+                                        &nbsp;
                                         <div class="form-group w-25">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Bold;">Hora de fin</label>
-                                            <input type="time" name="hora_fin" id="hora_fin" class="form-control w-100 text-white border border-danger"  style="background-color: #222; border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Hora de fin <span class="text-danger h4">*</span></label>
+                                            <input type="time" name="hora_fin" id="hora_fin" class="form-control w-100 text-white d-inline-block" style="color-scheme: dark; background-color: #3F3F3F; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                     </div>
 
 
                                     <div class="form-group">
-                                        <label for="username" class="text-white" style="font-family: Montserrat-Bold;">Otros detalles o comentarios</label>
-                                        <textarea name="detalles_comentarios" id="detalles_comentarios" class="form-control text-white border border-danger"  style="background-color: #222; border-radius: 10px; font-family: Montserrat-Regular;"></textarea>
+                                        <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Otros detalles o comentarios</label>
+                                        <textarea name="detalles_comentarios" id="detalles_comentarios" class="form-control text-white" style="background-color: #3F3F3F; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;"></textarea>
                                     </div>
 
-                                    <div style="display: inline-block; font-family: Montserrat-Bold;">
+                                    <div style="display: inline-block; font-family: Montserrat-Regular;">
                                         <div style="width: 90px; display: inline-block;" class="text-white">
                                             Suscribirse
                                         </div>
@@ -210,6 +223,8 @@
                                             <i class="bi bi-check-circle-fill me-2"></i>
                                             <span id="btnEnviar" style="font-family: Montserrat-Bold;">Enviar</span>
                                         </button>
+
+                                        <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">TEST</button> -->
                                     </div>
 
 
@@ -255,18 +270,18 @@
                             <!-- End -->
 
                             <!-- Paypal info -->
-                            <div id="nav-tab-paypal" class="tab-pane fade">
+                            <!-- <div id="nav-tab-paypal" class="tab-pane fade">
                                 <p>Paypal is easiest way to pay online</p>
                                 <p>
                                     <button type="button" class="btn btn-primary rounded-pill"><i class="fa fa-paypal mr-2"></i> Log into my Paypal</button>
                                 </p>
                                 <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
-                            </div>
+                            </div> -->
                             <!-- End -->
 
                             <!-- bank transfer info -->
-                            <div id="nav-tab-bank" class="tab-pane fade">
+                            <!-- <div id="nav-tab-bank" class="tab-pane fade">
                                 <h6>Bank account details</h6>
                                 <dl>
                                     <dt>Bank</dt>
@@ -282,20 +297,49 @@
                                 </dl>
                                 <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
-                            </div>
+                            </div> -->
                             <!-- End -->
-                        </div>
-                        <!-- End -->
+                            <!-- </div> -->
+                            <!-- End -->
 
+                            <!-- </div> -->
+                            <!-- </div> -->
+                            <!-- </div> -->
+                            <!-- </div> -->
+
+
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
     </div>
 
+    <?php
+    getModal('modalCotizar', $data);
+    ?>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 
@@ -310,13 +354,12 @@
 <script src="<?= media(); ?>js/bootstrap.min.js"></script>
 <script src="<?= media(); ?>js/main.js"></script>
 
-<script src="<?= media(); ?>js/functionsCotizar.js"></script>
 <!-- Data table plugin-->
 <script type="text/javascript" src="<?= media(); ?>js/plugins/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="<?= media(); ?>js/bootstrap.min.js"></script>
 
 <!--Notificaaciones de Swal -->
 <script src="<?= media(); ?>js/plugins/sweetalert2.js"></script>
-<?php footerAdmin($data); ?>
 
 <script src="<?= media(); ?>/js/functionsCotizar.js"></script>
+<?php footerAdmin($data); ?>

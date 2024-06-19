@@ -17,7 +17,7 @@ if (!empty($data['page'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/xxmzBrw.css">
-	<link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/css/style.css">
+	<link rel="stylesheet" href="<?= media() ?>/tienda/css/style.css">
     <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script defer src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script defer src="<?= media() ?>/tienda/js/mains.js"></script>
