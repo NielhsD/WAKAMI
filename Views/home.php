@@ -23,20 +23,7 @@ if (!empty($data['page'])) {
     <script defer src="<?= media() ?>/tienda/js/mains.js"></script>
 	
 	
-<style>
-  pointer-particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    pointer-events: none; /* Importante para permitir clics a través del componente */
-  }
-</style>
-<style>
-    
-</style>
+
 
 </head>
 <body>
@@ -46,12 +33,12 @@ if (!empty($data['page'])) {
   	<section class="wrapper">
 		<section class="content">
 			<div class="section hero"> 
-			<h2 class="ltext-201" style=" justify-content: center center; padding-top: 15%; margin-left: 35%;">Wakami Eventos</h2>
+			<h2 class="ltext-201">Wakami Eventos</h2>
 			</di>
 		</section>
 
 		<section class="image-container">
-			<img src="http://localhost/wakami/Assets/tienda/images/imagen0.png" alt="image">
+			<img src="<?= media() ?>/tienda/images/imagen1.png" alt="image">
 		</section>
   </section>
 
@@ -60,20 +47,63 @@ if (!empty($data['page'])) {
 	
 	<br><br><br><br>
 
-    <section class="section-services">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 isotope-item1">
-				<div class="service-item" style=" max-width: 350px; margin: auto;">
-				<div class="service-icon">
-					<img src="<?= media().'/tienda/images/catering1.jpg'; ?>" alt="Icono de servicio de catering" style="width: 100%; height: auto; padding: 80px; border-radius:50%">
-				</div>
-				<div class="service-content" style="text-align: center;">
-					<h3 style="color: purple; font-weight:bold; ">Servicio de Catering</h3> 
-					<p style="color: black; margin-top: 20px;">Ofrecemos un servicio completo de organización de eventos, desde la selección de menú hasta la disposición del lugar.</p>
-				</div>
-			</div>
 
+
+    <section class="section-services">
+	<h1 class="h1">SERVICIOS WAKAMI</h1><br><br>
+        <div class="container">
+
+		
+            <div class="row">
+			<div class="col-md-4 isotope-item1">
+                    <div class="service-item" style=" max-width: 350px; margin: auto;">
+                        <div class="service-icon">
+						<img src="<?= media().'/tienda/images/catering1.jpg'; ?>" alt="Icono de servicio de catering" style="width: 100%; height: auto; padding: 80px; border-radius:50%">
+                        </div>
+                        <div class="service-content" style="text-align: center;">
+                            <h3 style="color: purple; font-weight:bold; ">Servicio de Catering</h3>
+                            <p style="color: black; margin-top: 20px;">Ofrecemos un servicio completo de organización de eventos, desde la selección de menú hasta la disposición del lugar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 isotope-item1">
+                    <div class="service-item" style=" max-width: 350px; margin: auto;">
+                        <div class="service-icon">
+						<img src="<?= media().'/tienda/images/confeccion.jpg'; ?>" alt="Icono de servicio de catering" style="width: 100%; height: auto; padding: 80px; border-radius:50%">
+                        </div>
+                        <div class="service-content" style="text-align: center;">
+                            <h3 style="color: purple; font-weight:bold; ">Confección de Vestidos</h3>
+                            <p style="color: black; margin-top: 20px;">Diseñamos y confeccionamos vestidos a medida para ocasiones especiales, garantizando elegancia y estilo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 isotope-item1">
+                    <div class="service-item" style=" max-width: 350px; margin: auto;">
+                        <div class="service-icon">
+						<img src="<?= media().'/tienda/images/evento.jpg'; ?>" alt="Icono de servicio de catering" style="width: 100%; height: auto; padding: 80px; border-radius:50%">
+                        </div>
+                        <div class="service-content" style="text-align: center;">
+                            <h3 style="color: purple; font-weight:bold; ">Organización de Eventos</h3>
+                            <p style="color: black; margin-top: 20px;">Nos encargamos de cada detalle para que tu evento sea memorable, desde la planificación hasta la ejecución, dejando una impresión duradera en tus invitados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<br>
+		<div class="container">
+            <div class="row">
+			<div class="col-md-4 isotope-item1">
+                    <div class="service-item" style=" max-width: 350px; margin: auto;">
+                        <div class="service-icon">
+						<img src="<?= media().'/tienda/images/catering1.jpg'; ?>" alt="Icono de servicio de catering" style="width: 100%; height: auto; padding: 80px; border-radius:50%">
+                        </div>
+                        <div class="service-content" style="text-align: center;">
+                            <h3 style="color: purple; font-weight:bold; ">Servicio de Catering</h3>
+                            <p style="color: black; margin-top: 20px;">Ofrecemos un servicio completo de organización de eventos, desde la selección de menú hasta la disposición del lugar.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 isotope-item1">
                     <div class="service-item" style=" max-width: 350px; margin: auto;">

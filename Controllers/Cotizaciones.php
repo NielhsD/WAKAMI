@@ -1,4 +1,8 @@
 <?php
+headerTienda($data);
+?>
+
+<?php
 class Cotizaciones extends Controllers
 {
 	public function __construct()

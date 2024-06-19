@@ -1,3 +1,7 @@
+<?php 
+    headerTienda($data); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

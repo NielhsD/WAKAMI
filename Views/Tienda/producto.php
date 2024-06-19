@@ -9,7 +9,7 @@ $urlShared = base_url()."/tienda/producto/".$arrProducto['idproducto']."/".$arrP
 <br><br><br>
 <hr>
 
-<link rel="stylesheet" href="http://localhost/wakami/Assets/tienda/css/style.css">
+<link rel="stylesheet" href="<?= base_url(); ?>/tienda/css/style.css">
 
 	<!-- breadcrumb -->
 	<div class="container">
@@ -99,8 +99,7 @@ $urlShared = base_url()."/tienda/producto/".$arrProducto['idproducto']."/".$arrP
 							</div>
 
 							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook"
-								onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?= $urlShared; ?> &t=<?= $arrProducto['nombre'] ?>','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"
-								>
+								onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?= $urlShared; ?> &t=<?= $arrProducto['nombre'] ?>','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');">
 								<i class="fa fa-facebook"></i>
 							</a>
 

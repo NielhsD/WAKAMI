@@ -1,6 +1,15 @@
 /* author: https://codepen.io/GreenSock/pen/YzbPYMx
 GSAP
  */
+ pointer-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none; /* Importante para permitir clics a través del componente */
+}
  * {
     margin: 0;
     padding: 0;
@@ -45,6 +54,9 @@ GSAP
     opacity: 0; /* Inicia invisible */
     transform: scale(0.25); /* Inicia más pequeño */
     animation: showText 7s forwards; /* Usa la animación definida abajo */
+    justify-content: center center; 
+    padding-top: 15%;
+     margin-left: 35%;
 }
 
 @keyframes showText {
@@ -78,29 +90,50 @@ GSAP
   }
 
 /*Diseño de productos*/
-.isotope-item {
-  cursor: pointer;
+
+.h1 {
+  color: rgb(193, 8, 152);
+  font-family: 'harrington', sans-serif;
+  font-weight: 700;
+  text-align: center;
 }
 
-.isotope-item:hover {
-  border: 2px solid #6666;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05);
+.isotope-item1 {
+  width: 195px;
+  height: 285px;
+  background: #313131;
+  border-radius: 20px;
+  ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.2s ease-in-out;
 }
 
-/*Diseño de categorias de productos*/
-.isotope-item {
-    cursor: pointer;
-  }
+.service-icon {
+  height: 30%;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+}
 
-.isotope-item:hover {
-    border: 1px solid #6666;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05);
-  }
+.service-content {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
 
 /*Diseño de imagenes servicios*/
 .isotope-item1:hover {
+  background-color: #e22dcd;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   transform: scale(1.05);
 }
+

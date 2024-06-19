@@ -21,23 +21,6 @@ $idpagina = $data['page']['idpost'];
 <!-- Sección de Formulario de Contacto -->
 <section id="contactSection" class="bg0 p-t-104 p-b-116">
     <div class="container">
-        <!-- Empresas Asociadas -->
-        <div id="partnerLogos" class="text-center p-b-60">
-            <h2 class="mtext-105 cl2">Nuestras Empresas Asociadas</h2>
-            <div class="flex-w flex-sa">
-                <div class="partner-logo">
-                    <img src="<?= media() ?>/images/paraiso.png" alt="Paraiso Hoteles">
-                </div>
-                <div class="partner-logo">
-                    <img src="<?= media() ?>/images/impeiral.jpg" alt="Empresa 2">
-                </div>
-                <div class="partner-logo">
-                    <img src="<?= media() ?>/images/villa_sur.jpg" alt="Empresa 3">
-                </div>
-                <!-- Añadir más logos según sea necesario -->
-            </div>
-        </div>
-
         <!-- Formulario de Contacto -->
         <div id="contactFormContainer" class="flex-w flex-tr">
             <div class="size-210 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
