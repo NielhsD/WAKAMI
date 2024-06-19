@@ -1,6 +1,3 @@
-<?php 
-    headerTienda($data); 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -99,10 +96,10 @@
             <!-- End -->
             <div class="">
                 <div class="mx-auto " style="width: 75%;">
-                    <div class=" rounded-lg shadow-sm" style="opacity: 1; background-color: #2A2A2A; border-radius: 20px; padding: 5rem 10rem;">
+                    <div class=" rounded-lg shadow-sm" style="opacity: 1; background-color: #FFF; border-radius: 20px; padding: 5rem 10rem;">
                         <div class="row mb-3">
                             <div class=" mx-auto text-left">
-                                <h1 class="h3 font-weight-bold text-white pb-1" style="font-family: Montserrat-Bold;">COTIZA CON NOSOTROS</h1>
+                                <h1 class="h3 font-weight-bold text-dark pb-1" style="font-family: Montserrat-Bold;">COTIZA CON NOSOTROS</h1>
                                 <hr style="border-width: 2px; border-color: #5D5D5D; ">
                             </div>
                         </div>
@@ -121,8 +118,8 @@
 
                                     <div class="input-group">
                                         <div class="form-group w-50">
-                                            <label for="username" class=" text-white" style="font-family: Montserrat-Regular;">Tipo de evento</label>
-                                            <select name="id_tipo_evento" id="id_tipo_evento" class="form-control w-100 text-white " style="background-color: #3F3F3F; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;">
+                                            <label for="username" class=" text-dark" style="font-family: Montserrat-Regular;">Tipo de evento</label>
+                                            <select name="id_tipo_evento" id="id_tipo_evento" class="form-control w-100 text-dark " style="background-color: #FFF; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;">
                                                 <option value="TP001">Boda</option>
                                                 <option value="TP002">Quinceañera</option>
                                             </select>
@@ -130,8 +127,8 @@
                                         &nbsp;
                                         &nbsp;
                                         <div class="form-group w-50">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">¿Cómo deseas que te contactemos?</label>
-                                            <select name="id_metodo_atencion" id="id_metodo_atencion" class="form-control w-100 text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;">
+                                            <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">¿Cómo deseas que te contactemos?</label>
+                                            <select name="id_metodo_atencion" id="id_metodo_atencion" class="form-control w-100 text-dark" style="background-color: #FFF; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;">
                                                 <option value="M01">Por Whatsapp</option>
                                                 <option value="M02">Porllamada</option>
                                             </select>
@@ -141,74 +138,74 @@
 
                                     <div class="input-group">
                                         <div class="form-group w-50">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Nombres <span class="text-danger h4">*</span></label>
-                                            <input type="text" name="nombres" id="nombres" placeholder="Ingrese nombres" class="form-control w-100 text-white" style="background-color: #3F3F3F;  border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">Nombres <span class="text-danger h4">*</span></label>
+                                            <input type="text" name="nombres" id="nombres" placeholder="Ingrese nombres" class="form-control w-100 text-dark" style="background-color: #FFF;  border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                         &nbsp;
                                         &nbsp;
                                         <div class="form-group w-50">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Apellidos <span class="text-danger h4">*</span></label>
-                                            <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese apellidos" class="form-control w-100 text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">Apellidos <span class="text-danger h4">*</span></label>
+                                            <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese apellidos" class="form-control w-100 text-dark" style="background-color: #FFF; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                     </div>
 
                                     <div class="input-group">
                                         <div class="form-group" style="width: 33.3%">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Celular <span class="text-danger h4">*</span></label>
-                                            <input type="number" name="celular" id="celular" placeholder="Ingrese celular" class="form-control w-100 text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required maxlength="9">
+                                            <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">Celular <span class="text-danger h4">*</span></label>
+                                            <input type="number" name="celular" id="celular" placeholder="Ingrese celular" class="form-control w-100 text-dark" style="background-color: #FFF; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required maxlength="9">
                                         </div>
                                         &nbsp;
                                         &nbsp;
                                         <div class="form-group" style="width: 33.3%">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Teléfono fijo</label>
-                                            <input type="number" name="telefono_fijo" id="telefono_fino" placeholder="Ingrese teléfono fijo" class="form-control  w-100 text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required maxlength="9">
+                                            <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">Teléfono fijo</label>
+                                            <input type="number" name="telefono_fijo" id="telefono_fino" placeholder="Ingrese teléfono fijo" class="form-control  w-100 text-dark" style="background-color: #FFF; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required maxlength="9">
                                         </div>
                                         &nbsp;
                                         &nbsp;
                                         <div class="form-group" style="width: 33.3%">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Correo</label>
-                                            <input type="email" name="correo" id="correo" placeholder="Ingrese correo" class="form-control  w-100 text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular">
+                                            <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">Correo</label>
+                                            <input type="email" name="correo" id="correo" placeholder="Ingrese correo" class="form-control  w-100 text-dark" style="background-color: #FFF; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Nombre de la empresa</label>
-                                        <input type="text" name="nombre_empresa" id="nombre_empresa" placeholder="Ingrese el nombre de la empresa" class="form-control text-white" style="background-color: #3F3F3F; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                        <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">Nombre de la empresa</label>
+                                        <input type="text" name="nombre_empresa" id="nombre_empresa" placeholder="Ingrese el nombre de la empresa" class="form-control text-dark" style="background-color: #FFF; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;" required>
                                     </div>
 
                                     <div class="input-group">
                                         <div class="form-group w-25">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Número de invitados <span class="text-danger h4">*</span></label>
-                                            <input type="number" name="n_invitados" id="n_invitados" placeholder="Ingrese el número de invitados" class="form-control w-100  text-white" style="background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">Número de invitados <span class="text-danger h4">*</span></label>
+                                            <input type="number" name="n_invitados" id="n_invitados" placeholder="Ingrese el número de invitados" class="form-control w-100  text-dark" style="background-color: #FFF; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                         &nbsp;
                                         &nbsp;
                                         <div class="form-group w-25">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Fecha del evento <span class="text-danger h4">*</span></label>
-                                            <input type="date" class="form-control w-100 text-white d-inline-block" name="fecha_evento" id="fecha_evento" style="color-scheme: dark; background-color: #3F3F3F; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">Fecha del evento <span class="text-danger h4">*</span></label>
+                                            <input type="date" class="form-control w-100 text-dark d-inline-block" name="fecha_evento" id="fecha_evento" style="color-scheme: dark; background-color: #FFF; border-color: #5D5D5D;  border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                         &nbsp;
                                         &nbsp;
                                         <div class="form-group w-25">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Hora de inicio <span class="text-danger h4">*</span></label>
-                                            <input type="time" name="hora_inicio" id="hora_inicio" class="form-control w-100 text-white d-inline-block" style="color-scheme: dark; background-color: #3F3F3F; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">Hora de inicio <span class="text-danger h4">*</span></label>
+                                            <input type="time" name="hora_inicio" id="hora_inicio" class="form-control w-100 text-dark d-inline-block" style="color-scheme: dark; background-color: #FFF; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                         &nbsp;
                                         &nbsp;
                                         <div class="form-group w-25">
-                                            <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Hora de fin <span class="text-danger h4">*</span></label>
-                                            <input type="time" name="hora_fin" id="hora_fin" class="form-control w-100 text-white d-inline-block" style="color-scheme: dark; background-color: #3F3F3F; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;" required>
+                                            <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">Hora de fin <span class="text-danger h4">*</span></label>
+                                            <input type="time" name="hora_fin" id="hora_fin" class="form-control w-100 text-dark d-inline-block" style="color-scheme: dark; background-color: #FFF; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;" required>
                                         </div>
                                     </div>
 
 
                                     <div class="form-group">
-                                        <label for="username" class="text-white" style="font-family: Montserrat-Regular;">Otros detalles o comentarios</label>
-                                        <textarea name="detalles_comentarios" id="detalles_comentarios" class="form-control text-white" style="background-color: #3F3F3F; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;"></textarea>
+                                        <label for="username" class="text-dark" style="font-family: Montserrat-Regular;">Otros detalles o comentarios</label>
+                                        <textarea name="detalles_comentarios" id="detalles_comentarios" class="form-control text-dark" style="background-color: #FFF; border-color: #5D5D5D; border-radius: 10px; font-family: Montserrat-Regular;"></textarea>
                                     </div>
 
                                     <div style="display: inline-block; font-family: Montserrat-Regular;">
-                                        <div style="width: 90px; display: inline-block;" class="text-white">
+                                        <div style="width: 90px; display: inline-block;" class="text-dark">
                                             Suscribirse
                                         </div>
                                         <div style="display: inline-block;">
@@ -219,7 +216,7 @@
 
 
                                     <div class="d-flex">
-                                        <button id="btnActionForm" name="btnActionForm" class="btn btn-danger ml-auto" type="submit" style="width: 15%; height: 45px;">
+                                        <button id="btnActionForm" name="btnActionForm" class="btn btn-danger ml-auto" type="submit" style="width: 15%; height: 45px; border-radius: 20px">
                                             <i class="bi bi-check-circle-fill me-2"></i>
                                             <span id="btnEnviar" style="font-family: Montserrat-Bold;">Enviar</span>
                                         </button>

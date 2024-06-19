@@ -4,7 +4,7 @@ $arrProductos = $data['productos'];
  ?>
 <br><br><br>
 <hr>
-<link rel="stylesheet" href="<?= media() ?>/tienda/css/style.css">
+<link rel="stylesheet" href="http://localhost/wakami/Assets/tienda/css/style.css">
 
 	<!-- Product -->
 	<section class="bg0 m-t-23 p-b-140">
@@ -66,13 +66,13 @@ $arrProductos = $data['productos'];
 						<div class="block2">
 							<div class="block2-pic hov-img0">
 								<img src="<?= $portada ?>" alt="<?= $arrProductos[$p]['nombre'] ?>">
-								<a href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['idproducto'].'/'.$rutaProducto; ?>" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
+								<a href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['idproducto'].'/'.$ruta; ?>" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 									Ver producto
 								</a>
 							</div>
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['idproducto'].'/'.$rutaProducto; ?>" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="<?= base_url().'/tienda/producto/'.$arrProductos[$p]['idproducto'].'/'.$ruta; ?>" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 										<?= $arrProductos[$p]['nombre'] ?>
 									</a>
 									<span class="stext-105 cl3">
@@ -80,7 +80,8 @@ $arrProductos = $data['productos'];
 									</span>
 								</div>
 								<div class="block2-txt-child2 flex-r p-t-3">
-									<a href="#" id="<?= openssl_encrypt($arrProductos[$p]['idproducto'],METHODENCRIPT,KEY); ?>"
+									<a href="#"
+									id="<?= openssl_encrypt($arrProductos[$p]['idproducto'],METHODENCRIPT,KEY); ?>"
 									class="btn-addwish-b2 dis-block pos-relative js-addwish-b2 js-addcart-detail
 									icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11
 									">

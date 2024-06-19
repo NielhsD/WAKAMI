@@ -17,7 +17,7 @@ if (!empty($data['page'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/xxmzBrw.css">
-	<link rel="stylesheet" href="<?= media() ?>/tienda/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/css/style.css">
     <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script defer src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script defer src="<?= media() ?>/tienda/js/mains.js"></script>
@@ -119,7 +119,6 @@ if (!empty($data['page'])) {
                 <div class="col-md-4 isotope-item1">
                     <div class="service-item" style=" max-width: 350px; margin: auto;">
                         <div class="service-icon">
-						<img src="<?= media().'/tienda/images/evento.jpg'; ?>" alt="Icono de servicio de catering" style="width: 100%; height: auto; padding: 80px; border-radius:50%">
                         </div>
                         <div class="service-content" style="text-align: center;">
                             <h3 style="color: purple; font-weight:bold; ">Organización de Eventos</h3>

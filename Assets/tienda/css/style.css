@@ -103,7 +103,7 @@ GSAP
   height: 285px;
   background: #313131;
   border-radius: 20px;
-  ;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,34 +111,10 @@ GSAP
   color: white;
   transition: 0.2s ease-in-out;
 }
-
-<<<<<<< HEAD
-.service-icon {
-  height: 30%;
-  position: absolute;
-  transition: 0.2s ease-in-out;
-  z-index: 1;
-}
-
-.service-content {
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  transition: 0.2s ease-in-out;
-  z-index: 2;
-=======
-/*Diseño de productos relacionados*/
-.slick-slide {
-  cursor: pointer;
-}
-
-.slick-slide:hover{
-	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  	transform: scale(1.05);
->>>>>>> ab9fec18888267387af36f7ec097e2e1150c7dd8
+.isotope-item:hover {
+  background-color: #e22dcd;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
 }
 
 /*Diseño de imagenes servicios*/
@@ -148,8 +124,6 @@ GSAP
   transform: scale(1.05);
 }
 
-<<<<<<< HEAD
-=======
 /*Diseño de los botones de mi perfil*/
 .list-group-item.active {
 	z-index: 2;
@@ -157,14 +131,14 @@ GSAP
 	background-color: #e8175c;
 	border-color: #e8175c;
   }
-  
+
   /*Diseño del boton editar de mi perfil*/
   .btn-info {
 	color: #fff;
 	background-color: #e8175c;
 	border-color: #e8175c;
   }
-  
+
   /*Diseño del boton guardar de mi perfil*/
   .btn-primary {
     color: #fff;
@@ -183,4 +157,3 @@ GSAP
     border-color: #c6134b; /* Color del borde al hacer clic en el botón */
     color: #fff; /* Color del texto al hacer clic en el botón */
   }
->>>>>>> ab9fec18888267387af36f7ec097e2e1150c7dd8
