@@ -1,4 +1,8 @@
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
+
     let tableCotizaciones;
 
     tableCotizaciones = $('#tableCotizaciones').dataTable({
@@ -32,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "iDisplayLength": 10,
         "order": [[0, "desc"]]
     });
+
+
 
     var formCotizacion = document.querySelector("#formCotizacion");
     formCotizacion.onsubmit = function (e) {

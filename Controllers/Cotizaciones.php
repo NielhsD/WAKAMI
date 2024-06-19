@@ -20,6 +20,7 @@ class Cotizaciones extends Controllers
 		$data['page_tag'] = "Cotizaciones";
 		$data['page_title'] = "Cotizaciones de <small> Clientes </small>";
 		$data['page_name'] = "Cotizaciones de clientes";
+		$data['page_functions_js'] = "functionsCotizaciones.js";
 		$this->views->getView($this, "cotizaciones", $data);
 	}
 	public function getCotizaciones()
@@ -33,12 +34,12 @@ class Cotizaciones extends Controllers
 		for ($i = 0; $i < count($arrData); $i++) {
 
 			if ($arrData[$i]['situacion'] == "ATENDIDO") {
-				$arrData[$i]['situacion'] = '<span class="me-1 badge bg-success">ATENDIDO</span>';
+				$arrData[$i]['situacion'] = '<span class="me-1 badge bg-success  text-white">ATENDIDO</span>';
 			} elseif ($arrData[$i]['situacion'] == "PENDIENTE") {
-				$arrData[$i]['situacion'] = '<span class="me-1 badge bg-danger">PENDIENTE</span>';
+				$arrData[$i]['situacion'] = '<span class="me-1 badge bg-danger text-white">PENDIENTE</span>';
 			}
 			$arrData[$i]['acciones'] = '<div class="text-center">				
-				<button type="button" name="btnEditCotizacion" class="btn btn-primary btnEditCotizacion" onClick="fntEditCotizacion(\'' . $arrData[$i]['id_cotizacion'] . '\')" title="Editar"><i class="bi bi-pencil"></i></button>
+				<button type="button" name="btnEditCotizacion" class="btn btn-primary btnEditCotizacion" onClick="fntEditCotizacion(\'' . $arrData[$i]['id_cotizacion'] . '\')" title="Editar"><i class="fas fa-pencil-alt"></i></button>
 				</div>';
 		}
 		echo json_encode($arrData, JSON_UNESCAPED_UNICODE);

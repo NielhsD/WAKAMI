@@ -16,9 +16,9 @@ class Cotizar extends Controllers
         // $data['page_tag'] = "Solicitar Cotización";
         // $data['page_title'] = "Cotizando datos";
         // $data['page_name'] = "Cotizar";
-        
-        
-        
+
+
+
         $pageContent = getPageRout('inicio');
         $data['page_tag'] = NOMBRE_EMPESA;
         $data['page_title'] = NOMBRE_EMPESA;
@@ -26,8 +26,8 @@ class Cotizar extends Controllers
         $data['page'] = $pageContent;
         $data['slider'] = $this->getCategoriasT(CAT_SLIDER);
         $data['banner'] = $this->getCategoriasT(CAT_BANNER);
-        
-        
+
+
         $this->views->getView($this, "Cotizar", $data);
         // $data['productos'] = $this->getProductosT();
         // $this->views->getView($this, "home", $data);
@@ -53,7 +53,12 @@ class Cotizar extends Controllers
         $hora_inicio = $_POST['hora_inicio'];
         $hora_fin = $_POST['hora_fin'];
         $detalles_comentarios = $_POST['detalles_comentarios'];
-        $suscrito = $_POST['suscrito'];
+        $suscrito = "NO";
+
+        if (isset($_POST['suscrito'])) {
+            $suscrito = $_POST['suscrito'];
+        }
+        
         $situacion = $_POST['situacion'];
 
 
@@ -61,9 +66,9 @@ class Cotizar extends Controllers
         // echo json_encode($_POST);
 
 
-        if($suscrito == "" || $suscrito == null){
+        if ($suscrito == "" || $suscrito == null) {
             $suscrito = "NO";
-        }else{
+        } else {
             $suscrito = "SI";
         }
 
