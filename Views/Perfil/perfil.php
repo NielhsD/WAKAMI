@@ -3,29 +3,8 @@
   getModal('modalPerfil', $data);
 ?>
 
-<link rel="stylesheet" type="text/css" href="<?= media() ?>/tienda/css/style.css">
-<style>
-    /*Diseño de los botones de mi perfil*/
-.list-group-item.active {
-  z-index: 2;
-  color: #fff;
-  background-color: #e8175c;
-  border-color: #e8175c;
-}
+<link rel="stylesheet" type="text/css" href="<?= media() ?>./tienda/css/style.css">
 
-/*Diseño del boton editar de mi perfil*/
-.btn-info {
-  color: #fff;
-  background-color: #e8175c;
-  border-color: #e8175c;
-}
-/*Diseño del boton guardar de mi perfil*/
-.btn-primary {
-  color: #fff;
-  background-color: #e8175c;
-  border-color: #e8175c;
-}
-</style>
 <main class="bg0 p-t-120 p-b-120 d-flex justify-content-center align-items-center">
   <div class="container">
     <div class="row justify-content-center">
@@ -67,7 +46,7 @@
             <div class="card h-100">
               <div class="card-body">
                 <div class="timeline-post">
-                  <h5 class="mb-4">DATOS PERSONALES <button class="btn btn-sm btn-info ml-2" type="button" onclick="openModalPerfil();"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Editar</button></h5>
+                  <h5 class="mb-4">DATOS PERSONALES <button class="btn btn-sm btn-primary ml-2" type="button" onclick="openModalPerfil();"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Editar</button></h5>
                   <table class="table table-bordered">
                     <tbody>
                       <tr>
