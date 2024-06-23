@@ -3,11 +3,15 @@
 <aside class="app-sidebar">
     <!-- Sidebar user info -->
     <div class="app-sidebar__user">
-        <img class="app-sidebar__user-avatar" src="<?= media();?>/images/avatar.png" alt="User Image">
-        <div>
-            <p class="app-sidebar__user-name"><?= $_SESSION['userData']['nombres']; ?></p>
-            <p class="app-sidebar__user-designation"><?= $_SESSION['userData']['nombrerol']; ?></p>
-        </div>
+        <?php if (isset($_SESSION['userData']['foto_perfil']) && $_SESSION['userData']['foto_perfil']): ?>
+            <img class="app-sidebar__user-avatar" src="<?= base_url() . '/' . $_SESSION['userData']['foto_perfil']; ?>" alt="User Image">
+        <?php else: ?>
+            <img class="app-sidebar__user-avatar" src="<?= media(); ?>/images/avatar.png" alt="User Image">
+        <?php endif; ?>
+    <div>
+        <p class="app-sidebar__user-name"><?= $_SESSION['userData']['nombres']; ?></p>
+        <p class="app-sidebar__user-designation"><?= $_SESSION['userData']['nombrerol']; ?></p>
+    </div>
     </div>
 
     <!-- Sidebar menu items -->

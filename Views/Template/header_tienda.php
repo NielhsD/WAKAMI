@@ -121,14 +121,29 @@ $infoPreguntas = !empty(getInfoPage(PPREGUNTAS)) ? getInfoPage(PPREGUNTAS)['cont
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<?php if (isset($_SESSION['login'])) { ?>
-							Bienvenido: <?= $_SESSION['userData']['nombres'] . ' ' . $_SESSION['userData']['apellidos'] ?>
+							BIENVENIDO : <?= $_SESSION['userData']['nombres'] . ' ' . $_SESSION['userData']['apellidos'] ?>
 						<?php } ?>
 					</div>
 
-					<a href="<?= base_url(). '/perfil' ?>" class="text-white">
-    				<i class="fa fa-user fa-lg"></i> Mi Perfil
-					</a>
-					
+					<div class="right-top-bar flex-w h-full">
+						<?php 
+							if(isset($_SESSION['login'])){
+						?>
+						<a href="<?= base_url() ?>/dashboard" class="flex-c-m trans-04 p-lr-25">
+							Mis Pedidos
+						</a>
+						<?php } 
+							if(isset($_SESSION['login'])){
+						?>
+						<a href="<?= base_url() ?>/logout" class="flex-c-m trans-04 p-lr-25">
+							Salir
+						</a>
+						<?php }else{ ?>
+						<a href="<?= base_url() ?>/login" class="flex-c-m trans-04 p-lr-25">
+							Iniciar Sesión
+						</a>
+						<?php } ?>
+					</div>
 				</div>
 			</div>
 
@@ -197,6 +212,11 @@ $infoPreguntas = !empty(getInfoPage(PPREGUNTAS)) ? getInfoPage(PPREGUNTAS)['cont
 								<i class="zmdi zmdi-shopping-cart"></i>
 							</div>
 						<?php } ?>
+						<?php if (isset($_SESSION['login'])) { ?>
+							<a href="<?= base_url(). '/perfil' ?>" class="text-dark">
+    						<i class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 fa fa-user fa-lg"></i>
+						</a>
+						<?php } ?>
 					</div>
 				</nav>
 			</div>
@@ -254,7 +274,7 @@ $infoPreguntas = !empty(getInfoPage(PPREGUNTAS)) ? getInfoPage(PPREGUNTAS)['cont
 						if (isset($_SESSION['login'])) {
 						?>
 							<a href="<?= base_url() ?>/dashboard" class="flex-c-m trans-04 p-lr-25">
-								Mi cuenta
+								Mis Pedidos
 							</a>
 						<?php }
 						if (isset($_SESSION['login'])) {
