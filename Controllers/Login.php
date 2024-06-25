@@ -6,7 +6,7 @@
 			session_start();
 			if(isset($_SESSION['login']))
 			{
-				header('Location: '.base_url().'/dashboard');
+				header('Location: '.base_url());
 				die();
 			}
 			parent::__construct();
