@@ -16,7 +16,7 @@
       
       <!-- Perfil -->
       <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card profile-card h-100">
+        <div class="card profile-card h-100" style="width:400px;">
           <div class="card-body d-flex flex-column justify-content-center align-items-center">
             <div class="profile-header mb-3">
               <div class="cover-image"></div>
@@ -43,7 +43,7 @@
         <div class="tab-content h-100" id="myTabContent">
           <!-- Datos personales -->
           <div class="tab-pane fade show active h-100" id="user-timeline" role="tabpanel" aria-labelledby="user-timeline-tab">
-            <div class="card h-100">
+            <div class="card h-100" style="width:800px;">
               <div class="card-body">
                 <div class="timeline-post">
                   <h5 class="mb-4">DATOS PERSONALES <a href="<?= base_url(). '/usuarios/perfil' ?>" class="btn btn-sm btn-primary ml-2"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Actualizar</a></h5>
@@ -85,6 +85,35 @@
               </div>
             </div>
           </div>
+<<<<<<< Updated upstream
+=======
+
+          <!-- Datos fiscales -->
+          <div class="tab-pane fade h-100" id="user-settings" role="tabpanel" aria-labelledby="user-settings-tab">
+            <div class="card h-100" style="width:800px;">
+              <div class="card-body">
+                <div class="user-settings">
+                  <h4 class="line-head">Datos fiscales</h4>
+                  <form id="formDataFiscal" name="formDataFiscal">
+                    <div class="form-group">
+                      <label for="txtNit">Identificación Tributaria</label>
+                      <input class="form-control" type="text" id="txtNit" name="txtNit" value="<?= $_SESSION['userData']['nit']; ?>">
+                    </div>
+                    <div class="form-group">
+                      <label for="txtNombreFiscal">Nombre fiscal</label>
+                      <input class="form-control" type="text" id="txtNombreFiscal" name="txtNombreFiscal" value="<?= $_SESSION['userData']['nombrefiscal']; ?>">
+                    </div>
+                    <div class="form-group">
+                      <label for="txtDirFiscal">Dirección fiscal</label>
+                      <input class="form-control" type="text" id="txtDirFiscal" name="txtDirFiscal" value="<?= $_SESSION['userData']['direccionfiscal']; ?>">
+                    </div>
+                    <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i> Guardar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+>>>>>>> Stashed changes
         </div>
       </div>
     </div>
