@@ -10,8 +10,7 @@ $urlShared = base_url()."/tienda/producto/".$arrProducto['idproducto']."/".$arrP
 <hr>
 
 <!--<<<<<< HEAD-->
-<link rel="stylesheet" href="<?= base_url(); ?>/tienda/css/style.css">
-<!--=======-->
+<!--======= -->
 <link rel="stylesheet" href="<?= media() ?>/tienda/css/style.css">
 <!--ab9fec18888267387af36f7ec097e2e1150c7dd8-->
 

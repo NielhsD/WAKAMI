@@ -4,7 +4,7 @@ $arrProductos = $data['productos'];
  ?>
 <br><br><br>
 <hr>
-<link rel="stylesheet" href="http://localhost/wakami/Assets/tienda/css/style.css">
+<link rel="stylesheet" href="<?= media() ?>/tienda/css/style.css">
 
 	<!-- Product -->
 	<section class="bg0 m-t-23 p-b-140">
