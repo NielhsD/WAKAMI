@@ -158,3 +158,24 @@ GSAP
     border-color: #c6134b; /* Color del borde al hacer clic en el botón */
     color: #fff; /* Color del texto al hacer clic en el botón */
   }
+
+  /*Diseño para la imagen de fono en Nosotros*/
+  .item-slick1 {
+    max-height: 258px; /* Establece la altura máxima deseada */
+    background-size: cover; /* Ajusta el tamaño del fondo para cubrir completamente el contenedor */
+    background-position: center; /* Alinea el fondo al centro */
+    background-repeat: no-repeat; /* Evita la repetición del fondo */
+  }
+
+  /*Diseño para anaimación de imagenes*/
+  .animate__animated {
+    animation-duration: 1s;
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
