@@ -4,9 +4,13 @@
     $idpagina = $data['page']['idpost'];
 ?>
 
-<script>
-    document.querySelector('header').classList.add('header-v4');
-</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<script src="<?= media() ?>/js/functions_blog.js"></script>
+    <script>document.querySelector('header').classList.add('header-v4')</script>
+</head>
 
 <!-- Banner de título -->
 <!-- Banner de título -->
@@ -22,49 +26,105 @@
 
 <section id="eventosRealizados" class="bg0 p-t-104 p-b-116">
     <div class="container">
-        <div class="text-center p-b-60">
-            <h2 class="mtext-105 cl2">Eventos Realizados</h2>
-
-            <!-- Carrusel de Bootstrap -->
-            <div id="carouselEventos" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Evento 1 -->
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="<?= media() ?>/images/12345.jpg" alt="Evento 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <div class="caption-content">
-                                <p>Evento realizado el día <br><b>20/05/2023</b> en la ciudad <br>de <b>Chilca</b></p>
+        <div>
+            <p>Total de comentarios: <?php echo $data['cantidad']; ?></p>
+        </div>
+        <div class="row">
+            <div class="image">
+                <img src="<?= media() ?>/images/123.jpg" alt="Imagen" style="width: 100%;">
+            </div>
+            <div class="form-container">
+                <h3>Deja un comentario</h3>
+                <form>
+                    <div class="input-container2">
+                        <label for="name">Nombre:</label>
+                        <input id="nombre" type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-container2">
+                        <label for="comment">Comentario:</label>
+                        <textarea id="comentario" name="comment" required></textarea>
+                    </div>
+                    <div class="input-container2">
+                        <button id="btnguardar" type="button" class="submit-button2">Comentar</button>
+                    </div>
+                </form>
+                <?php foreach ($data['comment1'] as $comment1): ?>
+                    <div class="comments">
+                        <div class="comment">
+                            <h5><?= $comment1['nombre'] ?></h5>
+                            <p><?= $comment1['comentario'] ?></p>
+                            <div class="text-comment">
+                                <p><?= $comment1['fecha'] ?></p>
                             </div>
                         </div>
                     </div>
-                    <!-- Evento 2 -->
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="<?= media() ?>/images/123.jpg" alt="Evento 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <div class="caption-content">
-                                <p>Evento realizado el día <br><b>27/05/2023</b> en la ciudad <br>de <b>Lima</b></p>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="image">
+                <img src="<?= media() ?>/images/1234.jpg" alt="Imagen" style="width: 100%;">
+            </div>
+            <div class="form-container">
+                <h3>Deja un comentario</h3>
+                <form>
+                    <div class="input-container2">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-container2">
+                        <label for="comment">Comentario:</label>
+                        <textarea id="comment" name="comment" required></textarea>
+                    </div>
+                    <div class="input-container2">
+                        <button type="button" class="submit-button2">Comentar</button>
+                    </div>
+                </form>
+                <?php foreach ($data['comment2'] as $comment2): ?>
+                    <div class="comments">
+                        <div class="comment">
+                            <h5><?= $comment2['nombre'] ?></h5>
+                            <p><?= $comment2['comentario'] ?></p>
+                            <div class="text-comment">
+                                <p><?= $comment2['fecha'] ?></p>
                             </div>
                         </div>
                     </div>
-                    <!-- Evento 3 -->
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="<?= media() ?>/images/1234.jpg" alt="Evento 3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <div class="caption-content">
-                                <p>Evento realizado el día <br><b>20/05/2023</b> en la ciudad <br>de <b>Imperial</b></p>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="image">
+                <img src="<?= media() ?>/images/12345.jpg" alt="Imagen" style="width: 100%;">
+            </div>
+            <div class="form-container">
+                <h3>Deja un comentario</h3>
+                <form>
+                    <div class="input-container2">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-container2">
+                        <label for="comment">Comentario:</label>
+                        <textarea id="comment" name="comment" required></textarea>
+                    </div>
+                    <div class="input-container2">
+                        <button type="button" class="submit-button2">Comentar</button>
+                    </div>
+                </form>
+                <?php foreach ($data['comment3'] as $comment3): ?>
+                    <div class="comments">
+                        <div class="comment">
+                            <h5><?= $comment3['nombre'] ?></h5>
+                            <p><?= $comment3['comentario'] ?></p>
+                            <div class="text-comment">
+                                <p><?= $comment3['fecha'] ?></p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Flechas de Navegación del Carrusel -->
-                <a class="carousel-control-prev" href="#carouselEventos" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Anterior</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselEventos" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Siguiente</span>
-                </a>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
@@ -88,27 +148,72 @@
     footerTienda($data);
 ?>
 
-<!-- Estilos CSS adicionales para el carrusel -->
 <style>
-
-    #carouselEventos .carousel-item {
-        text-align: center; /* Alinear el texto de la descripción */
-    }
-
-    .caption-content {
-        background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-        color: #ffffff; /* Color del texto */
-        padding: 10px 20px; /* Espaciado interno */
-        border-radius: 5px; /* Bordes redondeados */
-    }
-
-    #carouselEventos .carousel-caption {
-        text-align: left; /* Alinear el texto de la descripción */
-        position: absolute; /* Posición absoluta para superponer sobre la imagen */
-        bottom: 20px; /* Distancia desde la parte inferior */
-        left: 20px; /* Distancia desde la izquierda */
-        right: 20px; /* Distancia desde la derecha */
+    /*.container {
+        margin: 20px;
+    }*/
     
+    .row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .image, .form-container {
+        box-sizing: border-box;
+    }
+    .image {
+        flex: 7; /* Proporción de 70% */
+        max-width: 70%;
+        padding-right: 10px;
+    }
+    .form-container {
+        flex: 3; /* Proporción de 30% */
+        max-width: 30%;
+        padding-left: 10px;
+    }
+    .input-container2 input,
+    .input-container2 textarea {
+        width: 100%;
+        padding: 5px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        font-size: 12px;
+        outline: none;
+    }
+    .submit-button2 {
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .comments {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .comment {
+        margin-bottom: 10px;
+    }
+    .comment h4 {
+        margin: 0 0 5px 0;
+    }
+    .comment p {
+        margin: 0;
+    }
+    .text-comment p {
+        margin-top: 10px;
+        display: flex;
+        font-size: 12px;
+        justify-content: flex-end;
     }
 </style>
-

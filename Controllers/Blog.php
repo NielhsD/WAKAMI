@@ -17,10 +17,23 @@
 				$data['page_title'] = NOMBRE_EMPESA." - ".$pageContent['titulo'];
 				$data['page_name'] = $pageContent['titulo'];
 				$data['page'] = $pageContent;
-				$this->views->getView($this,"blog",$data); 
+				$data['cantidad'] = $this->model->cantidadComentario();
+				$data['comment1'] = $this->model->selectComentarios(1);
+				$data['comment2'] = $this->model->selectComentarios(2);
+				$data['comment3'] = $this->model->selectComentarios(3);
+				$this->views->getView($this,"blog",$data);
 			}
 
 		}
 
+		public function guardarComentario()
+		{
+			$nombre = $_POST['nombre'];
+			$comentario = $_POST['comentario'];
+
+			$requestInsert = $this->model->insertComentario($nombre, $comentario);
+
+			echo json_encode($requestInsert,JSON_UNESCAPED_UNICODE);
+		}
 	}
- ?>
+?>
